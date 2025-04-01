@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="confetti-container" id="confetti-container"></div>
+  
+  <audio id="birthday-music" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <div class="music-control">
+    <button id="music-toggle" class="music-button">
+      <span class="music-icon">🔊</span>
+    </button>
+  </div>
+
+  <div class="navigation">
+    <button id="prev-section" class="nav-button" disabled>
+      <span class="nav-icon">←</span>
+    </button>
+    <button id="next-section" class="nav-button">
+      <span class="nav-icon">→</span>
+    </button>
+  </div>
+
+  <div class="sections-container">
+    <!-- Section 1: Birthday Entrance -->
+    <section id="entrance" class="section active">
+      <div class="entrance-content">
+        <div class="birthday-title">
+          <h1 class="title-line title-happy">Happy</h1>
+          <h1 class="title-line title-birthday">Birthday!</h1>
+        </div>
+        <div class="entrance-message">
+          <p>To my amazing buddy!</p>
+          <div class="scroll-hint">
+            <span>Scroll down to celebrate! 🎉</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Memories -->
+    <section id="memories" class="section">
+      <div class="memories-content">
+        <h2 class="section-title">The Memorable Moments 🎉</h2>
+        <div class="notes-container" id="notes-container">
+          <div class="memory-note note-yellow" data-index="0">
+            <div class="note-title">Memory #1</div>
+            <div class="note-hint">Click to read our memory!</div>
+          </div>
+          <div class="memory-note note-blue" data-index="1">
+            <div class="note-title">Memory #2</div>
+            <div class="note-hint">Click to read our memory!</div>
+          </div>
+          <div class="memory-note note-pink" data-index="2">
+            <div class="note-title">Memory #3</div>
+            <div class="note-hint">Click to read our memory!</div>
+          </div>
+        </div>
+        <div class="memory-content" id="memory-content">
+          <button class="close-button" id="close-memory">Close</button>
+          <div class="memory-text">
+            Tujhe yaad hai woh memorable moment 🤩, jab hum 11th standard mein the? Ek din Sir ne achanak se chemistry ka class test le liya tha, aur hum pure dar gaye the 😨. Sir ne 6 questions diye the, aur humne sirf 3 questions kiye the ✍, jabki poori class mein baaki logon ne sirf 1 ya 2 questions attempt kiye the.
+
+            Test hone ke baad Sir ne sabke ghar call bhi kiya tha 📞, aur hamare parents se baat bhi ki thi 😭. Yaad hai? Us din puri tarah se phat chuki thi 😂. Ghar jaane ka bhi mann nahi kar raha tha, toh hum class ke bahar khade the 🤦‍♂, soch rahe the ab kya karein.
+
+            Approx aadha ghanta tak khade hone ke baad 🤔, jab samajh aaya ki ab kuch nahi ho sakta 😅, tab humne ek dusre ko "All the Best" bola 🤝 aur ghar chale gaye the 🏠. Sir ke wajah se dant bhi padi thi 😵‍💫.
+
+            Yaad hai na? 😂 I can't forget this moment, so that's the reason I am sharing this memory with you at this best time, buddy! 🎂🥳🎁
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Personalized Message -->
+    <section id="message" class="section">
+      <div class="message-content">
+        <div class="message-card" id="message-card">
+          <div class="message-inner">
+            <div class="message-text">
+              ✨ Happy Birthday, Brother! 🥳🎂🎉
+
+              From 11th standard to now, our journey has been nothing short of legendary! 🔥 We've had some of the best memories together, from crazy classroom moments to unexpected chemistry tests 😆. But yeah, 12th standard was a different story… 💀😂. Humne jhagda kar liya tha aur us wajah se poora saal waste kar diya 😅. Lekin bhai, achi dosti wahi hoti hai jo har test pass kar jaye! And look at us now—stronger than ever! 💯🤝
+
+              Your dedication to NEET and becoming a surgeon 🩺 inspires me like crazy. You're not just chasing a career, but a mission to heal lives. And what makes you even greater is that you're not stopping there—you have the vision to build something even bigger, a business that'll make an impact 🚀💼.
+
+              Bhai, no matter what happens, I'm always with you. Keep grinding, keep believing, and keep proving the world wrong. The journey won't be easy, but legends like you don't take shortcuts—they build their own path!
+
+              On this special day, I wish you limitless success, happiness, and the strength to conquer every challenge. Happy Birthday once again, brother! 🥂🎈
+
+              Your forever friend, no matter what!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Photo Album -->
+    <section id="album" class="section">
+      <div class="album-content">
+        <h2 class="section-title">Our Photo Album</h2>
+        <div class="album-container">
+          <div class="album-page">
+            <div class="album-photos" id="album-photos">
+              <div class="photo-frame left-photo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-01%20at%2016.36.46_01b4577e.jpg-VUC4SwPMhGxYuajhxSSpFhyJC3DyVR.jpeg" alt="Photo 1" class="album-photo">
+              </div>
+              <div class="photo-frame right-photo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-01%20at%2016.36.47_0af0a674.jpg-DOX2hZeS9JHo5E4PtQslmnYwvRPZ33.jpeg" alt="Photo 2" class="album-photo">
+              </div>
+            </div>
+          </div>
+          <div class="album-navigation">
+            <button id="prev-page" class="album-nav-button" disabled>
+              <span class="nav-icon">←</span>
+            </button>
+            <div class="page-indicator">Page <span id="current-page">1</span> of 4</div>
+            <button id="next-page" class="album-nav-button">
+              <span class="nav-icon">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
